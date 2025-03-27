@@ -1,116 +1,116 @@
 @use "sass:color";
-@use "../../styles/tokens/button" as button;
+@use "../../styles/tokens/button" as *;
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: button.$button-border-radius;
-  font-family: button.$button-font-family;
-  font-weight: button.$button-font-weight;
+  border-radius: $border-radius;
+  font-family: $typography-font-family;
+  font-weight: $typography-font-weight;
   cursor: pointer;
   border: none;
-  transition: button.$button-transition;
+  transition: $transition;
   text-decoration: none;
 
   &:disabled {
-    opacity: button.$button-disabled-opacity;
+    opacity: $disabled-opacity;
     cursor: not-allowed;
   }
 }
 
 // Button sizes
 .small {
-  padding: button.$button-padding-small;
-  font-size: button.$button-font-small;
+  padding: $spacing-padding-small;
+  font-size: $typography-font-size-small;
 }
 
 .medium {
-  padding: button.$button-padding-medium;
-  font-size: button.$button-font-medium;
+  padding: $spacing-padding-medium;
+  font-size: $typography-font-size-medium;
 }
 
 .large {
-  padding: button.$button-padding-large;
-  font-size: button.$button-font-large;
+  padding: $spacing-padding-large;
+  font-size: $typography-font-size-large;
 }
 
 // Button variants
 .primary {
-  background-color: button.$button-primary-bg;
+  background-color: $colors-primary-bg;
   color: white;
 
   &:hover:not(:disabled) {
-    background-color: color.adjust(button.$button-primary-bg, $lightness: -10%);
+    background-color: color.adjust($colors-primary-hover, $lightness: -10%);
   }
 
   &:active:not(:disabled) {
-    background-color: color.adjust(button.$button-primary-bg, $lightness: -15%);
+    background-color: color.adjust($colors-primary-active, $lightness: -15%);
   }
 }
 
 .secondary {
-  background-color: transparent;
-  color: button.$button-primary-bg;
-  border: 1px solid button.$button-primary-bg;
+  background-color: $colors-secondary-bg;
+  color: $colors-secondary-color;
+  border: 1px solid $colors-secondary-border;
 
   &:hover:not(:disabled) {
-    background-color: rgba(button.$button-primary-bg, 0.05);
+    background-color: rgba($colors-secondary-hover, 0.05);
   }
 
   &:active:not(:disabled) {
-    background-color: rgba(button.$button-primary-bg, 0.1);
+    background-color: rgba($colors-secondary-active, 0.1);
   }
 }
 
 .success {
-  background-color: button.$button-success-bg;
+  background-color: $colors-success-bg;
   color: white;
 
   &:hover:not(:disabled) {
-    background-color: color.adjust(button.$button-success-bg, $lightness: -10%);
+    background-color: color.adjust($colors-success-hover, $lightness: -10%);
   }
 
   &:active:not(:disabled) {
-    background-color: color.adjust(button.$button-success-bg, $lightness: -15%);
+    background-color: color.adjust($colors-success-active, $lightness: -15%);
   }
 }
 
 .warning {
-  background-color: button.$button-warning-bg;
+  background-color: $colors-warning-bg;
   color: white;
 
   &:hover:not(:disabled) {
-    background-color: color.adjust(button.$button-warning-bg, $lightness: -10%);
+    background-color: color.adjust($colors-warning-hover, $lightness: -10%);
   }
 
   &:active:not(:disabled) {
-    background-color: color.adjust(button.$button-warning-bg, $lightness: -15%);
+    background-color: color.adjust($colors-warning-active, $lightness: -15%);
   }
 }
 
 .error {
-  background-color: button.$button-error-bg;
+  background-color: $colors-error-bg;
   color: white;
 
   &:hover:not(:disabled) {
-    background-color: color.adjust(button.$button-error-bg, $lightness: -10%);
+    background-color: color.adjust($colors-error-hover, $lightness: -10%);
   }
 
   &:active:not(:disabled) {
-    background-color: color.adjust(button.$button-error-bg, $lightness: -15%);
+    background-color: color.adjust($colors-error-active, $lightness: -15%);
   }
 }
 
 .ghost {
-  background-color: button.$button-ghost-bg;
-  color: button.$button-ghost-color;
+  background-color: $colors-ghost-bg;
+  color: $colors-ghost-color;
 
   &:hover:not(:disabled) {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba($colors-ghost-hover, 0.05);
   }
 
   &:active:not(:disabled) {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba($colors-ghost-active, 0.1);
   }
 }

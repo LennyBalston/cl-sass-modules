@@ -1,66 +1,65 @@
-@use "sass:color";
-@use "../../styles/tokens/heading" as heading;
+@use "../../styles/tokens/heading" as *;
 
 .heading {
-  font-family: heading.$heading-font-family;
-  color: heading.$heading-color-default;
+  font-family: $typography-font-family;
+  color: $colors-default;
   margin-top: 0;
-  margin-bottom: heading.$heading-margin-bottom;
+  margin-bottom: $spacing-margin-bottom;
 }
 
 .h1 {
-  font-size: heading.$heading-h1-size;
-  font-weight: heading.$heading-h1-weight;
-  line-height: heading.$heading-line-height-large;
+  font-size: $typography-font-size-h1;
+  font-weight: $typography-font-weight-h1;
+  line-height: $typography-line-height-large;
 }
 
 .h2 {
-  font-size: heading.$heading-h2-size;
-  font-weight: heading.$heading-h2-weight;
-  line-height: heading.$heading-line-height-large;
+  font-size: $typography-font-size-h2;
+  font-weight: $typography-font-weight-h2;
+  line-height: $typography-line-height-large;
 }
 
 .h3 {
-  font-size: heading.$heading-h3-size;
-  font-weight: heading.$heading-h3-weight;
-  line-height: heading.$heading-line-height-large;
+  font-size: $typography-font-size-h3;
+  font-weight: $typography-font-weight-h3;
+  line-height: $typography-line-height-large;
 }
 
 .h4 {
-  font-size: heading.$heading-h4-size;
-  font-weight: heading.$heading-h4-weight;
-  line-height: heading.$heading-line-height-large;
+  font-size: $typography-font-size-h4;
+  font-weight: $typography-font-weight-h4;
+  line-height: $typography-line-height-large;
 }
 
 .h5 {
-  font-size: heading.$heading-h5-size;
-  font-weight: heading.$heading-h5-weight;
-  line-height: heading.$heading-line-height-small;
+  font-size: $typography-font-size-h5;
+  font-weight: $typography-font-weight-h5;
+  line-height: $typography-line-height-small;
 }
 
 .h6 {
-  font-size: heading.$heading-h6-size;
-  font-weight: heading.$heading-h6-weight;
-  line-height: heading.$heading-line-height-small;
+  font-size: $typography-font-size-h6;
+  font-weight: $typography-font-weight-h6;
+  line-height: $typography-line-height-small;
 }
 
 // Color variants
 .primary {
-  color: heading.$heading-color-primary;
+  color: $colors-primary;
 }
 
 .success {
-  color: heading.$heading-color-success;
+  color: $colors-success;
 }
 
 .warning {
-  color: heading.$heading-color-warning;
+  color: $colors-warning;
 }
 
 .error {
-  color: heading.$heading-color-error;
+  color: $colors-error;
 }
 
 .info {
-  color: heading.$heading-color-info;
+  color: $colors-info;
 }

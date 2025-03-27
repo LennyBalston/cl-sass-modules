@@ -15,7 +15,9 @@ function objectToScss(obj: any, prefix: string = ""): string {
   let scss = "";
 
   for (const [key, value] of Object.entries(obj)) {
-    const variableName = prefix ? `${prefix}-${key}` : key;
+    // Convert camelCase to kebab-case
+    const kebabKey = key.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+    const variableName = prefix ? `${prefix}-${kebabKey}` : kebabKey;
 
     if (typeof value === "object" && value !== null) {
       scss += objectToScss(value, variableName);
