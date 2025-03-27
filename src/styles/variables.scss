@@ -27,3 +27,17 @@ $color-success: #34c759;
 $color-warning: #ff9500;
 $color-error: #ff3b30;
 $color-info: #007aff;
+
+// Button
+$button-border-radius: 4px;
+$button-font-weight: $font-weight-medium;
+$button-transition: all 0.2s ease-in-out;
+
+// Button sizes
+$button-padding-small: 0.25rem 0.5rem;
+$button-padding-medium: 0.5rem 1rem;
+$button-padding-large: 0.75rem 1.5rem;
+
+$button-font-small: 0.875rem;
+$button-font-medium: 1rem;
+$button-font-large: 1.125rem;
