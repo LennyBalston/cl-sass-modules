@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# CL React UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React component library with SASS modules and TypeScript support. Built with React 19 and Sass 1.86.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install cl-react-ui
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Import Components and Their Styles
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+You can import components individually along with their specific styles:
+
+```jsx
+// Import only the components you need with their specific styles
+import { Heading } from "cl-react-ui/Heading";
+import "cl-react-ui/Heading.css";
+
+import { Button } from "cl-react-ui/Button";
+import "cl-react-ui/Button.css";
 ```
+
+Or import everything at once:
+
+```jsx
+import { Button, Heading } from "cl-react-ui";
+import "cl-react-ui/Button.css";
+import "cl-react-ui/Heading.css";
+```
+
+### Using Components
+
+#### Heading Component
+
+```jsx
+import { Heading } from "cl-react-ui/Heading";
+import "cl-react-ui/Heading.css";
+
+function App() {
+  return (
+    <div>
+      <Heading variant="h1" text="Hello World" color="primary" />
+      <Heading variant="h2" text="This is a subheading" color="success" />
+      <Heading variant="h3" text="Smaller heading" />
+    </div>
+  );
+}
+```
+
+Heading props:
+
+- `variant`: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+- `text`: string
+- `color`: 'primary' | 'success' | 'warning' | 'error' | 'info' | 'default'
+- `className`: optional additional CSS classes
+
+#### Button Component
+
+```jsx
+import { Button } from "cl-react-ui/Button";
+import "cl-react-ui/Button.css";
+
+function App() {
+  return (
+    <div>
+      <Button variant="primary">Primary Button</Button>
+      <Button variant="secondary" size="small">
+        Small Secondary
+      </Button>
+      <Button variant="success" size="large">
+        Large Success
+      </Button>
+    </div>
+  );
+}
+```
+
+Button props:
+
+- `variant`: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'ghost'
+- `size`: 'small' | 'medium' | 'large'
+- `className`: optional additional CSS classes
+- All standard button attributes (onClick, disabled, etc.)
+
+## Requirements
+
+- React 19 or higher
+- Modern browser support
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build the library
+npm run build
+```
+
+## License
+
+MIT
