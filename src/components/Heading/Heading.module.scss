@@ -1,65 +1,65 @@
-@import "../../styles/variables.scss";
+@use "../../styles" as styles;
 
 .heading {
-  font-family: $font-family-base;
-  color: $color-text-primary;
+  font-family: styles.$font-family-base;
+  color: styles.$color-text-primary;
   margin-top: 0;
   margin-bottom: 0.5em;
 }
 
 .h1 {
-  font-size: $heading-h1-size;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-tight;
+  font-size: styles.$heading-h1-size;
+  font-weight: styles.$font-weight-bold;
+  line-height: styles.$line-height-tight;
 }
 
 .h2 {
-  font-size: $heading-h2-size;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-tight;
+  font-size: styles.$heading-h2-size;
+  font-weight: styles.$font-weight-bold;
+  line-height: styles.$line-height-tight;
 }
 
 .h3 {
-  font-size: $heading-h3-size;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-tight;
+  font-size: styles.$heading-h3-size;
+  font-weight: styles.$font-weight-bold;
+  line-height: styles.$line-height-tight;
 }
 
 .h4 {
-  font-size: $heading-h4-size;
-  font-weight: $font-weight-medium;
-  line-height: $line-height-tight;
+  font-size: styles.$heading-h4-size;
+  font-weight: styles.$font-weight-medium;
+  line-height: styles.$line-height-tight;
 }
 
 .h5 {
-  font-size: $heading-h5-size;
-  font-weight: $font-weight-medium;
-  line-height: $line-height-base;
+  font-size: styles.$heading-h5-size;
+  font-weight: styles.$font-weight-medium;
+  line-height: styles.$line-height-base;
 }
 
 .h6 {
-  font-size: $heading-h6-size;
-  font-weight: $font-weight-medium;
-  line-height: $line-height-base;
+  font-size: styles.$heading-h6-size;
+  font-weight: styles.$font-weight-medium;
+  line-height: styles.$line-height-base;
 }
 
 // Color variants
 .primary {
-  color: $color-primary;
+  color: styles.$color-primary;
 }
 
 .success {
-  color: $color-success;
+  color: styles.$color-success;
 }
 
 .warning {
-  color: $color-warning;
+  color: styles.$color-warning;
 }
 
 .error {
-  color: $color-error;
+  color: styles.$color-error;
 }
 
 .info {
-  color: $color-info;
+  color: styles.$color-info;
 }
