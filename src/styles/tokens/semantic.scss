@@ -1,0 +1,43 @@
+@use "sass:color";
+@use "foundation" as foundation;
+
+// Semantic Design Tokens
+// Map foundation tokens to functional design attributes
+
+// Semantic Colors
+$color-primary: foundation.$color-blue-500;
+$color-success: foundation.$color-green-500;
+$color-warning: foundation.$color-orange-500;
+$color-error: foundation.$color-red-500;
+$color-info: foundation.$color-blue-300;
+$color-text-primary: foundation.$color-gray-900;
+$color-text-secondary: foundation.$color-gray-700;
+
+// Semantic Typography
+$font-family-base: foundation.$font-family-base;
+$font-heading-1: foundation.$font-size-3xl;
+$font-heading-2: foundation.$font-size-2xl;
+$font-heading-3: foundation.$font-size-xl;
+$font-heading-4: foundation.$font-size-lg;
+$font-heading-5: foundation.$font-size-md;
+$font-heading-6: foundation.$font-size-sm;
+
+// Semantic Font Weights
+$font-weight-regular: foundation.$font-weight-regular;
+$font-weight-medium: foundation.$font-weight-medium;
+$font-weight-bold: foundation.$font-weight-bold;
+
+// Semantic Line Heights
+$line-height-heading: foundation.$line-height-tight;
+$line-height-body: foundation.$line-height-base;
+
+// Semantic Spacing
+$spacing-button-sm: foundation.$spacing-xs foundation.$spacing-sm;
+$spacing-button-md: foundation.$spacing-sm foundation.$spacing-lg;
+$spacing-button-lg: foundation.$spacing-md foundation.$spacing-xl;
+
+// Semantic Borders
+$border-radius-button: foundation.$border-radius-sm;
+
+// Semantic Transitions
+$transition-interactive: foundation.$transition-fast;

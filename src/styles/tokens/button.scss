@@ -1,0 +1,34 @@
+@use "sass:color";
+@use "semantic" as semantic;
+
+// Button Component Design Tokens
+// Apply semantic tokens to the Button component
+
+// Button Colors
+$button-primary-bg: semantic.$color-primary;
+$button-success-bg: semantic.$color-success;
+$button-warning-bg: semantic.$color-warning;
+$button-error-bg: semantic.$color-error;
+$button-ghost-bg: transparent;
+$button-ghost-color: semantic.$color-text-primary;
+
+// Button Typography
+$button-font-family: semantic.$font-family-base;
+$button-font-weight: semantic.$font-weight-medium;
+$button-font-small: semantic.$font-heading-6;
+$button-font-medium: semantic.$font-heading-6;
+$button-font-large: semantic.$font-heading-5;
+
+// Button Spacing
+$button-padding-small: semantic.$spacing-button-sm;
+$button-padding-medium: semantic.$spacing-button-md;
+$button-padding-large: semantic.$spacing-button-lg;
+
+// Button Borders
+$button-border-radius: semantic.$border-radius-button;
+
+// Button States
+$button-disabled-opacity: 0.6;
+
+// Button Transitions
+$button-transition: semantic.$transition-interactive;

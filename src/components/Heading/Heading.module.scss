@@ -1,65 +1,66 @@
-@use "../../styles" as styles;
+@use "sass:color";
+@use "../../styles/tokens/heading" as heading;
 
 .heading {
-  font-family: styles.$font-family-base;
-  color: styles.$color-text-primary;
+  font-family: heading.$heading-font-family;
+  color: heading.$heading-color-default;
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: heading.$heading-margin-bottom;
 }
 
 .h1 {
-  font-size: styles.$heading-h1-size;
-  font-weight: styles.$font-weight-bold;
-  line-height: styles.$line-height-tight;
+  font-size: heading.$heading-h1-size;
+  font-weight: heading.$heading-h1-weight;
+  line-height: heading.$heading-line-height-large;
 }
 
 .h2 {
-  font-size: styles.$heading-h2-size;
-  font-weight: styles.$font-weight-bold;
-  line-height: styles.$line-height-tight;
+  font-size: heading.$heading-h2-size;
+  font-weight: heading.$heading-h2-weight;
+  line-height: heading.$heading-line-height-large;
 }
 
 .h3 {
-  font-size: styles.$heading-h3-size;
-  font-weight: styles.$font-weight-bold;
-  line-height: styles.$line-height-tight;
+  font-size: heading.$heading-h3-size;
+  font-weight: heading.$heading-h3-weight;
+  line-height: heading.$heading-line-height-large;
 }
 
 .h4 {
-  font-size: styles.$heading-h4-size;
-  font-weight: styles.$font-weight-medium;
-  line-height: styles.$line-height-tight;
+  font-size: heading.$heading-h4-size;
+  font-weight: heading.$heading-h4-weight;
+  line-height: heading.$heading-line-height-large;
 }
 
 .h5 {
-  font-size: styles.$heading-h5-size;
-  font-weight: styles.$font-weight-medium;
-  line-height: styles.$line-height-base;
+  font-size: heading.$heading-h5-size;
+  font-weight: heading.$heading-h5-weight;
+  line-height: heading.$heading-line-height-small;
 }
 
 .h6 {
-  font-size: styles.$heading-h6-size;
-  font-weight: styles.$font-weight-medium;
-  line-height: styles.$line-height-base;
+  font-size: heading.$heading-h6-size;
+  font-weight: heading.$heading-h6-weight;
+  line-height: heading.$heading-line-height-small;
 }
 
 // Color variants
 .primary {
-  color: styles.$color-primary;
+  color: heading.$heading-color-primary;
 }
 
 .success {
-  color: styles.$color-success;
+  color: heading.$heading-color-success;
 }
 
 .warning {
-  color: styles.$color-warning;
+  color: heading.$heading-color-warning;
 }
 
 .error {
-  color: styles.$color-error;
+  color: heading.$heading-color-error;
 }
 
 .info {
-  color: styles.$color-info;
+  color: heading.$heading-color-info;
 }

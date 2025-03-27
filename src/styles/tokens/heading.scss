@@ -1,0 +1,37 @@
+@use "sass:color";
+@use "semantic" as semantic;
+
+// Heading Component Design Tokens
+// Apply semantic tokens to the Heading component
+
+// Heading Typography
+$heading-font-family: semantic.$font-family-base;
+$heading-h1-size: semantic.$font-heading-1;
+$heading-h2-size: semantic.$font-heading-2;
+$heading-h3-size: semantic.$font-heading-3;
+$heading-h4-size: semantic.$font-heading-4;
+$heading-h5-size: semantic.$font-heading-5;
+$heading-h6-size: semantic.$font-heading-6;
+
+// Heading Weights
+$heading-h1-weight: semantic.$font-weight-bold;
+$heading-h2-weight: semantic.$font-weight-bold;
+$heading-h3-weight: semantic.$font-weight-bold;
+$heading-h4-weight: semantic.$font-weight-medium;
+$heading-h5-weight: semantic.$font-weight-medium;
+$heading-h6-weight: semantic.$font-weight-medium;
+
+// Heading Line Heights
+$heading-line-height-large: semantic.$line-height-heading;
+$heading-line-height-small: semantic.$line-height-body;
+
+// Heading Colors
+$heading-color-default: semantic.$color-text-primary;
+$heading-color-primary: semantic.$color-primary;
+$heading-color-success: semantic.$color-success;
+$heading-color-warning: semantic.$color-warning;
+$heading-color-error: semantic.$color-error;
+$heading-color-info: semantic.$color-info;
+
+// Heading Spacing
+$heading-margin-bottom: 0.5em;

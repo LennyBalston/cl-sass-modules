@@ -1,110 +1,110 @@
 @use "sass:color";
-@use "../../styles" as styles;
+@use "../../styles/tokens/button" as button;
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: styles.$button-border-radius;
-  font-family: styles.$font-family-base;
-  font-weight: styles.$button-font-weight;
+  border-radius: button.$button-border-radius;
+  font-family: button.$button-font-family;
+  font-weight: button.$button-font-weight;
   cursor: pointer;
   border: none;
-  transition: styles.$button-transition;
+  transition: button.$button-transition;
   text-decoration: none;
 
   &:disabled {
-    opacity: 0.6;
+    opacity: button.$button-disabled-opacity;
     cursor: not-allowed;
   }
 }
 
 // Button sizes
 .small {
-  padding: styles.$button-padding-small;
-  font-size: styles.$button-font-small;
+  padding: button.$button-padding-small;
+  font-size: button.$button-font-small;
 }
 
 .medium {
-  padding: styles.$button-padding-medium;
-  font-size: styles.$button-font-medium;
+  padding: button.$button-padding-medium;
+  font-size: button.$button-font-medium;
 }
 
 .large {
-  padding: styles.$button-padding-large;
-  font-size: styles.$button-font-large;
+  padding: button.$button-padding-large;
+  font-size: button.$button-font-large;
 }
 
 // Button variants
 .primary {
-  background-color: styles.$color-primary;
+  background-color: button.$button-primary-bg;
   color: white;
 
   &:hover:not(:disabled) {
-    background-color: color.adjust(styles.$color-primary, $lightness: -10%);
+    background-color: color.adjust(button.$button-primary-bg, $lightness: -10%);
   }
 
   &:active:not(:disabled) {
-    background-color: color.adjust(styles.$color-primary, $lightness: -15%);
+    background-color: color.adjust(button.$button-primary-bg, $lightness: -15%);
   }
 }
 
 .secondary {
   background-color: transparent;
-  color: styles.$color-primary;
-  border: 1px solid styles.$color-primary;
+  color: button.$button-primary-bg;
+  border: 1px solid button.$button-primary-bg;
 
   &:hover:not(:disabled) {
-    background-color: rgba(styles.$color-primary, 0.05);
+    background-color: rgba(button.$button-primary-bg, 0.05);
   }
 
   &:active:not(:disabled) {
-    background-color: rgba(styles.$color-primary, 0.1);
+    background-color: rgba(button.$button-primary-bg, 0.1);
   }
 }
 
 .success {
-  background-color: styles.$color-success;
+  background-color: button.$button-success-bg;
   color: white;
 
   &:hover:not(:disabled) {
-    background-color: color.adjust(styles.$color-success, $lightness: -10%);
+    background-color: color.adjust(button.$button-success-bg, $lightness: -10%);
   }
 
   &:active:not(:disabled) {
-    background-color: color.adjust(styles.$color-success, $lightness: -15%);
+    background-color: color.adjust(button.$button-success-bg, $lightness: -15%);
   }
 }
 
 .warning {
-  background-color: styles.$color-warning;
+  background-color: button.$button-warning-bg;
   color: white;
 
   &:hover:not(:disabled) {
-    background-color: color.adjust(styles.$color-warning, $lightness: -10%);
+    background-color: color.adjust(button.$button-warning-bg, $lightness: -10%);
   }
 
   &:active:not(:disabled) {
-    background-color: color.adjust(styles.$color-warning, $lightness: -15%);
+    background-color: color.adjust(button.$button-warning-bg, $lightness: -15%);
   }
 }
 
 .error {
-  background-color: styles.$color-error;
+  background-color: button.$button-error-bg;
   color: white;
 
   &:hover:not(:disabled) {
-    background-color: color.adjust(styles.$color-error, $lightness: -10%);
+    background-color: color.adjust(button.$button-error-bg, $lightness: -10%);
   }
 
   &:active:not(:disabled) {
-    background-color: color.adjust(styles.$color-error, $lightness: -15%);
+    background-color: color.adjust(button.$button-error-bg, $lightness: -15%);
   }
 }
 
 .ghost {
-  background-color: transparent;
-  color: styles.$color-text-primary;
+  background-color: button.$button-ghost-bg;
+  color: button.$button-ghost-color;
 
   &:hover:not(:disabled) {
     background-color: rgba(0, 0, 0, 0.05);
