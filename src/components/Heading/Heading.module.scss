@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+
+.heading {
+  font-family: $font-family-base;
+  color: $color-text-primary;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.h1 {
+  font-size: $heading-h1-size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+.h2 {
+  font-size: $heading-h2-size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+.h3 {
+  font-size: $heading-h3-size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+.h4 {
+  font-size: $heading-h4-size;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-tight;
+}
+
+.h5 {
+  font-size: $heading-h5-size;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-base;
+}
+
+.h6 {
+  font-size: $heading-h6-size;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-base;
+}
+
+// Color variants
+.primary {
+  color: $color-primary;
+}
+
+.success {
+  color: $color-success;
+}
+
+.warning {
+  color: $color-warning;
+}
+
+.error {
+  color: $color-error;
+}
+
+.info {
+  color: $color-info;
+}
