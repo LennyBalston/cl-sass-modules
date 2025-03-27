@@ -1,5 +1,5 @@
-import "./App.css";
-import { Heading, Button } from "./components";
+import { Heading } from "./components";
+// import { Button } from "./components";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Heading variant="h6" text="This is an h6 heading" />
       </div>
 
-      <div className="card">
+      {/* <div className="card">
         <Heading variant="h2" text="Button Examples" color="success" />
 
         <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
@@ -37,7 +37,7 @@ function App() {
             Large
           </Button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
