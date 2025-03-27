@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import dts from "vite-plugin-dts";
-import libInjectCss from "vite-plugin-libcss";
+import cssInjectedByJs from "vite-plugin-css-injected-by-js";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,8 +12,13 @@ export default defineConfig({
       include: ["src/components", "src/index.ts"],
       exclude: ["src/App.tsx", "src/main.tsx"],
     }),
-    libInjectCss(),
+    cssInjectedByJs(),
   ],
+  css: {
+    modules: {
+      localsConvention: "camelCaseOnly",
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),

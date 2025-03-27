@@ -48,10 +48,13 @@ export const Button: React.FC<ButtonProps> = ({
     .filter(Boolean)
     .join(" ");
 
-  return (
-    <button className={buttonClasses} {...props}>
-      {children}
-    </button>
+  return React.createElement(
+    "button",
+    {
+      className: buttonClasses,
+      ...props,
+    },
+    children
   );
 };
 

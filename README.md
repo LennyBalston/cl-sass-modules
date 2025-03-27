@@ -10,26 +10,23 @@ npm install cl-react-ui
 
 ## Usage
 
-### Import Components and Their Styles
+### Import Components
 
-You can import components individually along with their specific styles:
+You can import components individually:
 
 ```jsx
-// Import only the components you need with their specific styles
+// Import only the components you need - CSS is automatically included
 import { Heading } from "cl-react-ui/Heading";
-import "cl-react-ui/Heading.css";
-
 import { Button } from "cl-react-ui/Button";
-import "cl-react-ui/Button.css";
 ```
 
 Or import everything at once:
 
 ```jsx
 import { Button, Heading } from "cl-react-ui";
-import "cl-react-ui/Button.css";
-import "cl-react-ui/Heading.css";
 ```
+
+No need to import CSS separately - it's automatically included with each component!
 
 ### Using Components
 
@@ -37,7 +34,6 @@ import "cl-react-ui/Heading.css";
 
 ```jsx
 import { Heading } from "cl-react-ui/Heading";
-import "cl-react-ui/Heading.css";
 
 function App() {
   return (
@@ -61,7 +57,6 @@ Heading props:
 
 ```jsx
 import { Button } from "cl-react-ui/Button";
-import "cl-react-ui/Button.css";
 
 function App() {
   return (
