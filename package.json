@@ -25,10 +25,11 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.build.json && vite build",
-    "lint": "eslint .",
+    "build": "npm run generate-tokens && tsc -p tsconfig.build.json && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "generate-tokens": "tsx scripts/generate-scss.ts"
+    "compile-tokens": "tsc ./src/styles/tokens/foundation.ts ./src/styles/tokens/semantic.ts ./src/styles/tokens/button.ts ./src/styles/tokens/heading.ts --outDir src/styles/tokens --module ES2020 --target ES2020 --moduleResolution node",
+    "generate-tokens": "npm run compile-tokens && tsx scripts/generate-scss.ts"
   },
   "peerDependencies": {
     "react": "^19.0.0",

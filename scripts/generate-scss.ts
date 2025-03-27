@@ -1,10 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
-import { foundation } from "../src/styles/tokens/foundation";
-import { semantic } from "../src/styles/tokens/semantic";
-import { button } from "../src/styles/tokens/button";
-import { heading } from "../src/styles/tokens/heading";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,38 +30,50 @@ function objectToScss(obj: any, prefix: string = ""): string {
 /**
  * Generates SCSS files from TypeScript token definitions
  */
-function generateScssFiles() {
+async function generateScssFiles() {
   const tokensDir = path.join(__dirname, "../src/styles/tokens");
+  const files = fs.readdirSync(tokensDir);
 
-  // Generate foundation.scss
-  const foundationScss = objectToScss(foundation);
-  fs.writeFileSync(
-    path.join(tokensDir, "foundation.scss"),
-    `// Foundation Design Tokens\n// Generated from TypeScript\n\n${foundationScss}`
-  );
+  // Process each .ts file in the tokens directory
+  for (const file of files) {
+    if (
+      file.endsWith(".ts") &&
+      !file.endsWith(".d.ts") &&
+      file !== "_index.ts"
+    ) {
+      const tokenName = path.basename(file, ".ts");
+      const tokenModule = await import(`../src/styles/tokens/${tokenName}.js`);
 
-  // Generate semantic.scss
-  const semanticScss = objectToScss(semantic);
-  fs.writeFileSync(
-    path.join(tokensDir, "semantic.scss"),
-    `// Semantic Design Tokens\n// Generated from TypeScript\n\n${semanticScss}`
-  );
+      // Get the token object - assume it's exported with the same name as the file
+      const tokenObject = tokenModule[tokenName];
 
-  // Generate button.scss
-  const buttonScss = objectToScss(button);
-  fs.writeFileSync(
-    path.join(tokensDir, "button.scss"),
-    `// Button Component Design Tokens\n// Generated from TypeScript\n\n${buttonScss}`
-  );
+      if (tokenObject) {
+        const scssContent = objectToScss(tokenObject);
+        const scssFileName = `${tokenName}.scss`;
 
-  // Generate heading.scss
-  const headingScss = objectToScss(heading);
-  fs.writeFileSync(
-    path.join(tokensDir, "heading.scss"),
-    `// Heading Component Design Tokens\n// Generated from TypeScript\n\n${headingScss}`
-  );
+        // Convert TitleCase to kebab-case for the token type in the comment
+        const tokenType = tokenName
+          .replace(/([A-Z])/g, " $1")
+          .trim()
+          .replace(/\s+/g, " ")
+          .split(" ")
+          .join(" ")
+          .toLowerCase();
 
-  console.log("SCSS files generated successfully!");
+        fs.writeFileSync(
+          path.join(tokensDir, scssFileName),
+          `// ${
+            tokenType.charAt(0).toUpperCase() + tokenType.slice(1)
+          } Design Tokens\n` + `// Generated from TypeScript\n\n${scssContent}`
+        );
+
+        console.log(`Generated ${scssFileName}`);
+      }
+    }
+  }
+
+  console.log("\nSCSS files generated successfully!");
 }
 
-generateScssFiles();
+// Need to handle the promise since we're using async/await
+generateScssFiles().catch(console.error);
