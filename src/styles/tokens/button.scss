@@ -1,34 +1,35 @@
-@use "sass:color";
-@use "semantic" as semantic;
-
 // Button Component Design Tokens
-// Apply semantic tokens to the Button component
+// Generated from TypeScript
 
-// Button Colors
-$button-primary-bg: semantic.$color-primary;
-$button-success-bg: semantic.$color-success;
-$button-warning-bg: semantic.$color-warning;
-$button-error-bg: semantic.$color-error;
-$button-ghost-bg: transparent;
-$button-ghost-color: semantic.$color-text-primary;
-
-// Button Typography
-$button-font-family: semantic.$font-family-base;
-$button-font-weight: semantic.$font-weight-medium;
-$button-font-small: semantic.$font-heading-6;
-$button-font-medium: semantic.$font-heading-6;
-$button-font-large: semantic.$font-heading-5;
-
-// Button Spacing
-$button-padding-small: semantic.$spacing-button-sm;
-$button-padding-medium: semantic.$spacing-button-md;
-$button-padding-large: semantic.$spacing-button-lg;
-
-// Button Borders
-$button-border-radius: semantic.$border-radius-button;
-
-// Button States
-$button-disabled-opacity: 0.6;
-
-// Button Transitions
-$button-transition: semantic.$transition-interactive;
+$colors-primary-bg: #3366ff;
+$colors-primary-hover: #3366ff;
+$colors-primary-active: #3366ff;
+$colors-secondary-bg: transparent;
+$colors-secondary-color: #3366ff;
+$colors-secondary-border: #3366ff;
+$colors-secondary-hover: #3366ff;
+$colors-secondary-active: #3366ff;
+$colors-success-bg: #34c759;
+$colors-success-hover: #34c759;
+$colors-success-active: #34c759;
+$colors-warning-bg: #ff9500;
+$colors-warning-hover: #ff9500;
+$colors-warning-active: #ff9500;
+$colors-error-bg: #ff3b30;
+$colors-error-hover: #ff3b30;
+$colors-error-active: #ff3b30;
+$colors-ghost-bg: transparent;
+$colors-ghost-color: #333333;
+$colors-ghost-hover: #333333;
+$colors-ghost-active: #333333;
+$typography-fontFamily: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$typography-fontWeight: 500;
+$typography-fontSize-small: 1rem;
+$typography-fontSize-medium: 1rem;
+$typography-fontSize-large: 1.25rem;
+$spacing-padding-small: 0.25rem 0.5rem;
+$spacing-padding-medium: 0.5rem 1rem;
+$spacing-padding-large: 0.75rem 1.5rem;
+$borderRadius: 4px;
+$disabled-opacity: 0.6;
+$transition: all 0.2s ease-in-out;
